@@ -1,6 +1,6 @@
 # Folders #
 CodyCode/bin/
-CodyCode/.setings/
+CodyCode/.setings/*
 
 *.class
 
