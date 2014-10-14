@@ -72,6 +72,7 @@ public interface Logger {
 	 * <li>SHORT - will use only 4 digit short codes in the output. Good for a more constant appearance.</li>
 	 * <li>CONCISE - will use the shortest readable name possible. Normally the best choice.</li>
 	 * <li>UNMODIFIED - will use exactly the same level name as put in. Only use if you must need to use equivalent names for different purposes.</li>
+	 * </ul>
 	 */
 	void setDisplayType(DisplayType displayType);
 	/**

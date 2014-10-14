@@ -48,6 +48,20 @@ public enum LoggingLevel {
 	INTR, //4 LETTER SHORT
 	INTERNAL;  //FULL CONCISE
 	
+	/**
+	 * 
+	 * @param orig LoggingLevel to covert
+	 * @param target Target DisplayType to use
+	 * @return Converted LoggingLevel
+	 * 
+	 * <p>Will return the converted LoggingLevel based on the given DisplayType</p>
+	 * <ul><h5>DisplayType conversions</h5>
+	 * <li>FULL - will use the longest most explanatory name possible.</li>
+	 * <li>SHORT - will use only 4 digit short codes in the output. Good for a more constant appearance.</li>
+	 * <li>CONCISE - will use the shortest readable name possible. Normally the best choice.</li>
+	 * <li>UNMODIFIED - will use exactly the same level name as put in. Only use if you must need to use equivalent names for different purposes.</li>
+	 * </ul>
+	 */
 	public static LoggingLevel convert(LoggingLevel orig,DisplayType target){
 		switch(target){
 		case FULL:
@@ -61,6 +75,13 @@ public enum LoggingLevel {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param orig LoggingLevel to be converted
+	 * @return Converted LoggingLevel
+	 * 
+	 * <p>Convents input LoggingLevel to the 4 letter short code</p>
+	 */
 	public static LoggingLevel convertDown(LoggingLevel orig){
 		
 		/*
@@ -134,6 +155,14 @@ public enum LoggingLevel {
 		}
 	}
 	
+	
+	/**
+	 * 
+	 * @param orig LoggingLevel to convert
+	 * @return Converted LoggingLevel
+	 * 
+	 * <p>Returns the longest name for the input LoggingLevel</p>
+	 */
 	public static LoggingLevel convertUp(LoggingLevel orig){
 		
 		/*
@@ -207,6 +236,14 @@ public enum LoggingLevel {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param orig LoggingLevel to convert
+	 * @return Converted LoggingLevel
+	 * 
+	 * <p>Returns the most Concise name for the input LoggingLevel</p>
+	 * 
+	 */
 	public static LoggingLevel convertConcise(LoggingLevel orig){
 		
 		/*
