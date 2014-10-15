@@ -26,13 +26,7 @@ public class FileLogger implements Logger{
 	 * <p>This will OVERWRITE the file used!</p>
 	 */
 	public FileLogger(File file){
-		try {
-			output = new PrintStream(new FileOutputStream(file));
-			ready = true;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this(file,false);
 	}
 	
 	/**
@@ -58,13 +52,7 @@ public class FileLogger implements Logger{
 	 * <p>This will OVERWRITE the file used!</p>
 	 */
 	public FileLogger(){
-		try {
-			output = new PrintStream(new FileOutputStream(new File("FileLoggerOutput.log")));
-			ready = true;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this(false);
 	}
 	
 	/**
@@ -76,13 +64,7 @@ public class FileLogger implements Logger{
 	 * 
 	 */
 	public FileLogger(boolean append){
-		try {
-			output = new PrintStream(new FileOutputStream(new File("FileLoggerOutput.log"),append));
-			ready = true;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this(new File("FileLoggerOutput.log"),append);
 	}
 	
 	@Override
