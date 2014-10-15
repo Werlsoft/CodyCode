@@ -93,7 +93,7 @@ public class FileLogger implements Logger{
 	@Override
 	public void log(Object message, LoggingLevel level) {
 		if(ready)
-			output.printf(format + "\n","TimeStamp",level,message);
+			output.printf(format + "\n","TimeStamp",LoggingLevel.convert(level, displayType),message);
 	}
 
 	@Override
