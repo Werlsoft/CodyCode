@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import enums.DisplayType;
-import enums.LoggingLevel;
-
 
 public class LogggingReader extends Reader{
 
