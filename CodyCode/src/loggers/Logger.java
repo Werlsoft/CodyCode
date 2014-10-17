@@ -3,7 +3,11 @@ package loggers;
 import enums.DisplayType;
 import enums.LoggingLevel;
 
-public interface Logger {
+public abstract class Logger {
+	
+	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
+	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
+	protected String format = "%1$s-%2$s: %3$s\n"; //1 for time, 2 for level, 3 for message
 	
 	/**
 	 * 
@@ -15,7 +19,9 @@ public interface Logger {
 	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link ConsoleLogger} attaches to System.out automatically)
 	 * 
 	 */
-	void log(Object message);
+	void log(Object message){
+		this.log(message, defaultLevel);
+	}
 	/**
 	 * 
 	 * @param message The information to display
@@ -27,14 +33,16 @@ public interface Logger {
 	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link ConsoleLogger} attaches to System.out automatically)
 	 * 
 	 */
-	void log(Object message,LoggingLevel level);
+	abstract void log(Object message,LoggingLevel level);
 	/**
 	 * 
 	 * @param c character to add to buffer
 	 * 
 	 * Allows a character input. Will log when a '\n' character is recived.
 	 */
-	void charLog(char c);
+	void charLog(char c){
+		//TODO make this
+	}
 	/**
 	 * 
 	 * @param format
@@ -46,21 +54,27 @@ public interface Logger {
 	 * 	<li>'<code>%3$s</code>' - Message</li>
 	 * </ul>
 	 */
-	void setFormat(String format);
+	void setFormat(String format){
+		this.format = format;
+	}
 	/**
 	 * 
 	 * @return
 	 * 
 	 * <p>Returns a string representing the format used for logging.</p>
 	 */
-	String getFormat();
+	String getFormat(){
+		return this.format;
+	}
 	/**
 	 * 
 	 * @param level
 	 * 
 	 * <p>Sets the default level as used in the log(Object message) method</p>
 	 */
-	void setDefaultLevel(LoggingLevel level);
+	void setDefaultLevel(LoggingLevel level){
+		this.defaultLevel = level;
+	}
 	/**
 	 * 
 	 * @return
@@ -68,7 +82,9 @@ public interface Logger {
 	 * <p>Returns the default level as used in the log(Object message) method.</p>
 	 * 
 	 */
-	LoggingLevel getDefaultLevel();
+	LoggingLevel getDefaultLevel(){
+		return this.defaultLevel;
+	}
 	/**
 	 * 
 	 * @param displayType
@@ -81,17 +97,23 @@ public interface Logger {
 	 * <li>UNMODIFIED - will use exactly the same level name as put in. Only use if you must need to use equivalent names for different purposes.</li>
 	 * </ul>
 	 */
-	void setDisplayType(DisplayType displayType);
+	void setDisplayType(DisplayType displayType){
+		this.displayType = displayType;
+	}
 	/**
 	 * 
 	 * @return
 	 * 
 	 * <p>Returns the currently active display type.</p>
 	 */
-	DisplayType getDisplayType();
+	DisplayType getDisplayType(){
+		return this.displayType;
+	}
 	/**
 	 * 
 	 * @return
 	 */
-	Logger getLogger();
+	Logger getLogger(){
+		return this;
+	}
 }

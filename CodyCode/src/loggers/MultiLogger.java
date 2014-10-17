@@ -3,21 +3,13 @@ package loggers;
 import enums.DisplayType;
 import enums.LoggingLevel;
 
-public class MultiLogger implements Logger {
-
-	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
-	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
-	protected String format = "%1$s-%2$s: %3$s/n"; //1 for time, 2 for level, 3 for message
+public class MultiLogger extends Logger {
+	
 	protected final Logger[] loggers;
 	
 	
 	public MultiLogger(Logger... loggers){
 		this.loggers = loggers;
-	}
-	
-	@Override
-	public void log(Object message) {
-		this.log(message,defaultLevel);
 	}
 
 	@Override
@@ -34,44 +26,23 @@ public class MultiLogger implements Logger {
 
 	@Override
 	public void setFormat(String format) {
-		this.format = format;
+		super.setFormat(format);
 		for(Logger l:loggers)
-			l.setFormat(format);
-	}
-
-	@Override
-	public String getFormat() {
-		return format;
+			l.setFormat(this.format);
 	}
 
 	@Override
 	public void setDefaultLevel(LoggingLevel level) {
-		defaultLevel = level;
+		super.setDefaultLevel(level);
 		for(Logger l:loggers)
-			l.setDefaultLevel(level);
-	}
-
-	@Override
-	public LoggingLevel getDefaultLevel() {
-		return defaultLevel;
+			l.setDefaultLevel(this.defaultLevel);
 	}
 
 	@Override
 	public void setDisplayType(DisplayType displayType) {
-		this.displayType = displayType;
+		super.setDisplayType(displayType);
 		for(Logger l:loggers)
-			l.setDisplayType(displayType);
+			l.setDisplayType(this.displayType);
 	}
-
-	@Override
-	public DisplayType getDisplayType() {
-		return displayType;
-	}
-
-	@Override
-	public Logger getLogger() {
-		return this;
-	}
-
 
 }
