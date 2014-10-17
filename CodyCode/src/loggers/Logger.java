@@ -1,4 +1,4 @@
-package util;
+package loggers;
 
 import enums.DisplayType;
 import enums.LoggingLevel;
