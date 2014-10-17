@@ -2,10 +2,9 @@ package loggers;
 
 import java.io.PrintStream;
 
-import enums.DisplayType;
 import enums.LoggingLevel;
 
-public class ConsoleLogger extends Logger {
+public class ConsoleLogger extends BaseLogger {
 	
 	protected final PrintStream output = System.out; //Hard wired to System.out because its a console logger
 

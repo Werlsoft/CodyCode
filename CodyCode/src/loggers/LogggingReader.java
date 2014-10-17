@@ -11,18 +11,18 @@ import enums.LoggingLevel;
 public class LogggingReader extends Reader{
 
 	protected final InputStreamReader inRead;
-	protected final Logger logger;
+	protected final BaseLogger logger;
 	
-	public LogggingReader(InputStreamReader in,Logger logger){
+	public LogggingReader(InputStreamReader in,BaseLogger logger){
 		inRead = in;
 		this.logger = logger;
 	}
 	
-	public LogggingReader(Logger logger){
+	public LogggingReader(BaseLogger logger){
 		this(new InputStreamReader(System.in),logger);
 	}
 	
-	public Logger getLogger() {
+	public BaseLogger getLogger() {
 		return logger;
 	}
 	

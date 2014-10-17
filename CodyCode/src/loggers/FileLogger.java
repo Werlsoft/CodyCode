@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 import enums.LoggingLevel;
 
-public class FileLogger extends Logger{
+public class FileLogger extends BaseLogger{
 	/**
 	 * When this is true this means that the FileLogger is ready to write to files. If you use the log() method while this is false input will be ignored.
 	 */

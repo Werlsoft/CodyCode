@@ -3,45 +3,45 @@ package loggers;
 import enums.DisplayType;
 import enums.LoggingLevel;
 
-public class MultiLogger extends Logger {
+public class MultiLogger extends BaseLogger {
 	
-	protected final Logger[] loggers;
+	protected final BaseLogger[] loggers;
 	
 	
-	public MultiLogger(Logger... loggers){
+	public MultiLogger(BaseLogger... loggers){
 		this.loggers = loggers;
 	}
 
 	@Override
 	public void log(Object message, LoggingLevel level) {
-		for(Logger l:loggers)
+		for(BaseLogger l:loggers)
 			l.log(message, level);
 	}
 
 	@Override
 	public void charLog(char c) {
-		for(Logger l:loggers)
+		for(BaseLogger l:loggers)
 			l.charLog(c);
 	}
 
 	@Override
 	public void setFormat(String format) {
 		super.setFormat(format);
-		for(Logger l:loggers)
+		for(BaseLogger l:loggers)
 			l.setFormat(this.format);
 	}
 
 	@Override
 	public void setDefaultLevel(LoggingLevel level) {
 		super.setDefaultLevel(level);
-		for(Logger l:loggers)
+		for(BaseLogger l:loggers)
 			l.setDefaultLevel(this.defaultLevel);
 	}
 
 	@Override
 	public void setDisplayType(DisplayType displayType) {
 		super.setDisplayType(displayType);
-		for(Logger l:loggers)
+		for(BaseLogger l:loggers)
 			l.setDisplayType(this.displayType);
 	}
 
