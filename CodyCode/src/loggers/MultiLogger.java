@@ -11,7 +11,7 @@ public class MultiLogger implements Logger {
 	protected final Logger[] loggers;
 	
 	
-	MultiLogger(Logger... loggers){
+	public MultiLogger(Logger... loggers){
 		this.loggers = loggers;
 	}
 	
