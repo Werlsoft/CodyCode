@@ -10,6 +10,7 @@ public abstract class BaseLogger implements Logger {
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
 	protected String format = "%1$s-%2$s: %3$s\n"; //1 for time, 2 for level, 3 for message
+	public char[] chars = new char[0];
 	
 	public void log(Object message){
 		this.log(message, defaultLevel);
@@ -18,7 +19,18 @@ public abstract class BaseLogger implements Logger {
 	abstract public void log(Object message,LoggingLevel level);
 	
 	public void charLog(char c){
-		//TODO make this
+		if(c == '\n'){
+			this.log(new String(chars));
+			chars = new char[0];
+		}
+		else{
+		char[] old = chars.clone();
+		chars = new char[old.length + 1];
+		for(int i = 0; i < old.length; i++){
+			chars[i] = old[i];
+		}
+		chars[old.length] = c;
+		}
 	}
 	
 	public void setFormat(String format){

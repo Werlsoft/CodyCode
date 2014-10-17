@@ -2,6 +2,7 @@ package loggers;
 
 import java.io.PrintStream;
 
+import abstracts.BaseLogger;
 import enums.LoggingLevel;
 
 public class ConsoleLogger extends BaseLogger {

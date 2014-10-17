@@ -1,5 +1,6 @@
 package loggers;
 
+import abstracts.BaseLogger;
 import enums.DisplayType;
 import enums.LoggingLevel;
 

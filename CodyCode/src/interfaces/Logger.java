@@ -1,7 +1,5 @@
 package interfaces;
 
-import loggers.BaseLogger;
-import loggers.ConsoleLogger;
 import enums.DisplayType;
 import enums.LoggingLevel;
 
