@@ -12,7 +12,7 @@ public class FileLogger implements Logger{
 	
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
-	protected String format = "%1$s-%2$s: %3$s"; //1 for time, 2 for level, 3 for message
+	protected String format = "%1$s-%2$s: %3$s\n"; //1 for time, 2 for level, 3 for message
 	/**
 	 * When this is true this means that the FileLogger is ready to write to files. If you use the log() method while this is false input will be ignored.
 	 */
@@ -75,7 +75,7 @@ public class FileLogger implements Logger{
 	@Override
 	public void log(Object message, LoggingLevel level) {
 		if(ready)
-			output.printf(format + "\n","TimeStamp",LoggingLevel.convert(level, displayType),message);
+			output.printf(format,"TimeStamp",LoggingLevel.convert(level, displayType),message);
 	}
 
 	@Override

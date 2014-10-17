@@ -7,7 +7,7 @@ public class MultiLogger implements Logger {
 
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
-	protected String format = "%1$s-%2$s: %3$s"; //1 for time, 2 for level, 3 for message
+	protected String format = "%1$s-%2$s: %3$s/n"; //1 for time, 2 for level, 3 for message
 	protected final Logger[] loggers;
 	
 	
