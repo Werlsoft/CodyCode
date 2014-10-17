@@ -8,7 +8,7 @@ import enums.DisplayType;
 import enums.LoggingLevel;
 
 
-public class UserInputLogger extends Reader implements Logger{
+public class ReaderLogger extends Reader implements Logger{
 
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
@@ -16,7 +16,7 @@ public class UserInputLogger extends Reader implements Logger{
 	protected final InputStreamReader inRead;
 	protected final Logger logger;
 	
-	public UserInputLogger(InputStreamReader in,Logger logger){
+	public ReaderLogger(InputStreamReader in,Logger logger){
 		inRead = in;
 		this.logger = logger;
 		defaultLevel = logger.getDefaultLevel();
@@ -24,7 +24,7 @@ public class UserInputLogger extends Reader implements Logger{
 		format = logger.getFormat();
 	}
 	
-	public UserInputLogger(Logger logger){
+	public ReaderLogger(Logger logger){
 		this(new InputStreamReader(System.in),logger);
 	}
 	
@@ -38,6 +38,12 @@ public class UserInputLogger extends Reader implements Logger{
 		logger.log(message,level);
 	}
 
+	@Override
+	public void charLog(char c) {
+		// TODO Auto-generated method stub
+		
+	}	
+	
 	@Override
 	public void setFormat(String format) {
 		this.format = format;
@@ -85,7 +91,5 @@ public class UserInputLogger extends Reader implements Logger{
 	public void close() throws IOException {
 		inRead.close();
 	}
-	
-	
 	
 }

@@ -79,6 +79,12 @@ public class FileLogger implements Logger{
 	}
 
 	@Override
+	public void charLog(char c) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
 	public void setFormat(String format) {
 		this.format = format;
 	}
@@ -112,7 +118,7 @@ public class FileLogger implements Logger{
 	public Logger getLogger() {
 		return this;
 	}
-	
+
 	
 	
 }

@@ -30,6 +30,13 @@ public interface Logger {
 	void log(Object message,LoggingLevel level);
 	/**
 	 * 
+	 * @param c character to add to buffer
+	 * 
+	 * Allows a character input. Will log when a '\n' character is recived.
+	 */
+	void charLog(char c);
+	/**
+	 * 
 	 * @param format
 	 * 
 	 * <p>Used to format the output of the {@link Logger} to all outputs.</p><br/>

@@ -21,6 +21,12 @@ public class ConsoleLogger implements Logger {
 	public void log(Object message, LoggingLevel level) {
 		output.printf(format, "Time Mark",LoggingLevel.convert(level, displayType),message);
 	}
+
+	@Override
+	public void charLog(char c) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	@Override
 	public void setDefaultLevel(LoggingLevel level) {
@@ -56,6 +62,7 @@ public class ConsoleLogger implements Logger {
 	public Logger getLogger() {
 		return this;
 	}
+
 
 
 }

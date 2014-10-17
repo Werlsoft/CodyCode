@@ -27,6 +27,12 @@ public class MultiLogger implements Logger {
 	}
 
 	@Override
+	public void charLog(char c) {
+		for(Logger l:loggers)
+			l.charLog(c);
+	}
+
+	@Override
 	public void setFormat(String format) {
 		this.format = format;
 		for(Logger l:loggers)
@@ -66,5 +72,6 @@ public class MultiLogger implements Logger {
 	public Logger getLogger() {
 		return this;
 	}
+
 
 }
