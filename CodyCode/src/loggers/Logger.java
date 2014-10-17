@@ -82,4 +82,9 @@ public interface Logger {
 	 * <p>Returns the currently active display type.</p>
 	 */
 	DisplayType getDisplayType();
+	/**
+	 * 
+	 * @return
+	 */
+	Logger getLogger();
 }

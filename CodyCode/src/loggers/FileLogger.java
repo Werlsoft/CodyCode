@@ -107,6 +107,11 @@ public class FileLogger implements Logger{
 	public DisplayType getDisplayType() {
 		return displayType;
 	}
+
+	@Override
+	public Logger getLogger() {
+		return this;
+	}
 	
 	
 	
