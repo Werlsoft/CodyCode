@@ -10,6 +10,7 @@ public abstract class BaseLogger implements Logger {
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
 	protected String format = "%1$s-%2$s: %3$s\n"; //1 for time, 2 for level, 3 for message
+	protected boolean RTL = false;
 	public char[] chars = new char[0];
 	
 	public void log(Object message){
@@ -55,6 +56,14 @@ public abstract class BaseLogger implements Logger {
 	
 	public DisplayType getDisplayType(){
 		return this.displayType;
+	}
+	
+	public void setRTL(boolean RTL){
+		this.RTL = RTL;
+	}
+	
+	public boolean getRTL(){
+		return RTL;
 	}
 	
 	public Logger getLogger(){

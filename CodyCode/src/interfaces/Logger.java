@@ -88,6 +88,8 @@ public interface Logger {
 	 * <p>Returns the currently active display type.</p>
 	 */
 	public DisplayType getDisplayType();
+	public void setRTL(boolean rtl);
+	public boolean getRTL();
 	/**
 	 * 
 	 * @return

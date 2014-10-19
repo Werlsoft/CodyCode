@@ -46,5 +46,12 @@ public class MultiLogger extends BaseLogger {
 		for(Logger l:loggers)
 			l.setDisplayType(this.displayType);
 	}
+	
+	@Override
+	public void setRTL(boolean RTL){
+		super.setRTL(RTL);
+		for(Logger l:loggers)
+			l.setRTL(RTL);
+	}
 
 }
