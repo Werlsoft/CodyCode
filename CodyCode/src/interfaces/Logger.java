@@ -88,7 +88,15 @@ public interface Logger {
 	 * <p>Returns the currently active display type.</p>
 	 */
 	public DisplayType getDisplayType();
+	/**
+	 * 
+	 * @param rtl when set to true RTL mode will be on. Input strings will be printed out in reverse.
+	 */
 	public void setRTL(boolean rtl);
+	/**
+	 * 
+	 * @return return weather or net RTL mode is on.
+	 */
 	public boolean getRTL();
 	/**
 	 * 
