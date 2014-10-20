@@ -1,5 +1,7 @@
 package interfaces;
 
-public interface ReaderLogger extends Logger{
+public interface ReaderLogger extends Logger, Readable{
 
+	
+	
 }

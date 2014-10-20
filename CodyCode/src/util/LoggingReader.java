@@ -17,10 +17,6 @@ public class LoggingReader extends Reader{
 		this.logger = logger;
 	}
 	
-	public LoggingReader(Logger logger){
-		this(new InputStreamReader(System.in),logger);
-	}
-	
 	public Logger getLogger() {
 		return logger;
 	}
