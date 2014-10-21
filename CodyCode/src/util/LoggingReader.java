@@ -28,14 +28,14 @@ public class LoggingReader extends Reader{
 	@Override
 	public int read() throws IOException{
 		int data = inRead.read();
-		this.logger.charLog((char) data); //see what I did there?
+		this.logger.charLog((char) data);
 		return data;
 	}
 	
 	@Override
 	public int read(char[] cbuf, int off, int len) throws IOException {
 		int data = inRead.read(cbuf, off, len);
-		this.logger.charLog((char) data); //see what I did there?
+		this.logger.charLog((char) data);
 		return data;
 	}
 
