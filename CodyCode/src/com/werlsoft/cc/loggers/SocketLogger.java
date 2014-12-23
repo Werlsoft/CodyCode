@@ -1,11 +1,11 @@
-package loggers;
+package com.werlsoft.cc.loggers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import enums.LoggingLevel;
-import abstracts.BaseLogger;
+import com.werlsoft.cc.abstracts.BaseLogger;
+import com.werlsoft.cc.enums.LoggingLevel;
 
 public class SocketLogger extends BaseLogger {
 

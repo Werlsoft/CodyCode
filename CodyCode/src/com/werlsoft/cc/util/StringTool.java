@@ -1,4 +1,4 @@
-package util;
+package com.werlsoft.cc.util;
 
 public class StringTool {
 

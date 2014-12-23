@@ -1,4 +1,4 @@
-package enums;
+package com.werlsoft.cc.enums;
 
 public enum DisplayType {
 	/**

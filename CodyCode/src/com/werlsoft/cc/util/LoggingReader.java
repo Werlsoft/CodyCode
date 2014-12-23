@@ -1,9 +1,9 @@
-package util;
-
-import interfaces.Logger;
+package com.werlsoft.cc.util;
 
 import java.io.IOException;
 import java.io.Reader;
+
+import com.werlsoft.cc.interfaces.Logger;
 
 
 public class LoggingReader extends Reader{

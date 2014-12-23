@@ -1,23 +1,45 @@
-package util;
+package com.werlsoft.cc.util;
 
 public class Boxer {
 	
-	char corners = '+';
-	char celing =  '-';
-	char spacer =  ' ';
-	char walls =   '|';
+	public static char DefaultCorners = '╬';
+	public static char AltCorners = '+';
+	public static char DefaultCeling =  '=';
+	public static char AltCeling = '-';
+	public static char DefaultSpacer =  ' ';
+	public static char AltSpacer = ' ';
+	public static char DefaultWalls =   '‖';
+	public static char AltWalls = '|';
 	
-	public static void main(String args[]){
-		new Boxer().box("this is \n a test!");
-		new Boxer().box("this is a very long test \n that has diffirent \n lengths \n of lines \n and its awesome or something!");
-		new Boxer().box("One line test");
-		new Boxer().box("");
-		new Boxer().box("\n\n\n\n\n");
-		
-	}
+	final char corners;
+	final char celing;
+	final char spacer;
+	final char walls;
 	
 	public Boxer(){
-		
+		this(false);
+		//TODO add set method or such.
+	}
+	
+	public Boxer(boolean alt){
+		if(alt){
+			this.corners = AltCorners;
+			this.celing = AltCeling;
+			this.spacer = AltSpacer;
+			this.walls = AltWalls;
+		} else {
+			this.corners = DefaultCorners;
+			this.celing = DefaultCeling;
+			this.spacer = DefaultSpacer;
+			this.walls = DefaultWalls;
+		}
+	}
+	
+	public Boxer(char corner, char celing, char spacer, char wall){
+		this.corners = corner;
+		this.celing = celing;
+		this.spacer = spacer;
+		this.walls = wall;
 	}
 
 	public void box(String toBox){

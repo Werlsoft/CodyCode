@@ -1,9 +1,9 @@
-package util;
+package com.werlsoft.cc.util;
 
 import java.io.IOException;
 import java.io.Writer;
 
-import interfaces.Logger;
+import com.werlsoft.cc.interfaces.Logger;
 
 public class LoggingWriter extends Writer {
 	

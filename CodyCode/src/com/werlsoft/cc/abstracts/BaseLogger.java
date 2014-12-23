@@ -1,9 +1,9 @@
-package abstracts;
+package com.werlsoft.cc.abstracts;
 
 
-import interfaces.Logger;
-import enums.DisplayType;
-import enums.LoggingLevel;
+import com.werlsoft.cc.enums.DisplayType;
+import com.werlsoft.cc.enums.LoggingLevel;
+import com.werlsoft.cc.interfaces.Logger;
 
 public abstract class BaseLogger implements Logger {
 	

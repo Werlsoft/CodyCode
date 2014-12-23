@@ -1,9 +1,9 @@
-package loggers;
+package com.werlsoft.cc.loggers;
 
-import interfaces.Logger;
-import abstracts.BaseLogger;
-import enums.DisplayType;
-import enums.LoggingLevel;
+import com.werlsoft.cc.abstracts.BaseLogger;
+import com.werlsoft.cc.enums.DisplayType;
+import com.werlsoft.cc.enums.LoggingLevel;
+import com.werlsoft.cc.interfaces.Logger;
 
 public class MultiLogger extends BaseLogger {
 	
