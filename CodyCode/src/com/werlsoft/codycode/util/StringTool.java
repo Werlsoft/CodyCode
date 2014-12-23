@@ -1,4 +1,4 @@
-package com.werlsoft.cc.util;
+package com.werlsoft.codycode.util;
 
 public class StringTool {
 

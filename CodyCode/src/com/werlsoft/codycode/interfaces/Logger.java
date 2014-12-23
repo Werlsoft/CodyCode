@@ -1,7 +1,7 @@
-package com.werlsoft.cc.interfaces;
+package com.werlsoft.codycode.interfaces;
 
-import com.werlsoft.cc.enums.DisplayType;
-import com.werlsoft.cc.enums.LoggingLevel;
+import com.werlsoft.codycode.enums.DisplayType;
+import com.werlsoft.codycode.enums.LoggingLevel;
 
 public interface Logger {
 	/**

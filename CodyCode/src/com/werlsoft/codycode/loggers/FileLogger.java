@@ -1,12 +1,12 @@
-package com.werlsoft.cc.loggers;
+package com.werlsoft.codycode.loggers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-import com.werlsoft.cc.abstracts.BaseLogger;
-import com.werlsoft.cc.enums.LoggingLevel;
+import com.werlsoft.codycode.abstracts.BaseLogger;
+import com.werlsoft.codycode.enums.LoggingLevel;
 
 public class FileLogger extends BaseLogger{
 	/**

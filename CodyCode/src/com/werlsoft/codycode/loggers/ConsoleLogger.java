@@ -1,10 +1,10 @@
-package com.werlsoft.cc.loggers;
+package com.werlsoft.codycode.loggers;
 
 import java.io.PrintStream;
 
-import com.werlsoft.cc.abstracts.BaseLogger;
-import com.werlsoft.cc.enums.LoggingLevel;
-import com.werlsoft.cc.util.StringTool;
+import com.werlsoft.codycode.abstracts.BaseLogger;
+import com.werlsoft.codycode.enums.LoggingLevel;
+import com.werlsoft.codycode.util.StringTool;
 
 public class ConsoleLogger extends BaseLogger {
 	

@@ -1,9 +1,9 @@
-package com.werlsoft.cc.util;
+package com.werlsoft.codycode.util;
 
 import java.io.IOException;
 import java.io.Reader;
 
-import com.werlsoft.cc.interfaces.Logger;
+import com.werlsoft.codycode.interfaces.Logger;
 
 
 public class LoggingReader extends Reader{
