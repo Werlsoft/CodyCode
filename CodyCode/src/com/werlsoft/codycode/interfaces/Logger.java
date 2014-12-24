@@ -8,10 +8,10 @@ public interface Logger {
 	 * 
 	 * @param message The information to display
 	 * 
-	 * <p>Used to send Strings to all outputs connected to the {@link BaseLogger} this method is run on. This method uses the Default level set using the setDefaultLevel method.</p>
+	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.adstracts.BaseLogger} this method is run on. This method uses the Default level set using the setDefaultLevel method.</p>
 	 * <p> For example <br/>
 	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'<br/>
-	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link ConsoleLogger} attaches to System.out automatically)
+	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link com.werlsoft.codycode.loggers.ConsoleLogger} attaches to System.out automatically)
 	 * 
 	 */
 	public void log(Object message);
@@ -20,10 +20,10 @@ public interface Logger {
 	 * @param message The information to display
 	 * @param level The level to display when logging message
 	 * 
-	 * <p>Used to send Strings to all outputs connected to the {@link BaseLogger} this method is run on.</p>
+	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.adstracts.BaseLogger} this method is run on.</p>
 	 * <p> For example
 	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'
-	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link ConsoleLogger} attaches to System.out automatically)
+	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link com.werlsoft.codycode.loggers.ConsoleLogger} attaches to System.out automatically)
 	 * 
 	 */
 	public void log(Object message,LoggingLevel level);
@@ -38,7 +38,7 @@ public interface Logger {
 	 * 
 	 * @param format
 	 * 
-	 * <p>Used to format the output of the {@link BaseLogger} to all outputs.</p><br/>
+	 * <p>Used to format the output of the {@link com.werlsoft.codycode.adstracts.BaseLogger} to all outputs.</p><br/>
 	 * <ul><h5>These codes are replaced with the listed attribute</h5>
 	 * 	<li>'<code>%1$s</code>' - TimeStamp</li>
 	 * 	<li>'<code>%2$s</code>' - LoggingLevel</li>
