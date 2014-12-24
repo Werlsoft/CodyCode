@@ -4,11 +4,11 @@ public class Boxer {
 	
 	public static char DefaultCorners = '╬';
 	public static char AltCorners = '+';
-	public static char DefaultCeling =  '=';
+	public static char DefaultCeling = '=';
 	public static char AltCeling = '-';
-	public static char DefaultSpacer =  ' ';
+	public static char DefaultSpacer = ' ';
 	public static char AltSpacer = ' ';
-	public static char DefaultWalls =   '‖';
+	public static char DefaultWalls = '‖';
 	public static char AltWalls = '|';
 	
 	final char corners;
