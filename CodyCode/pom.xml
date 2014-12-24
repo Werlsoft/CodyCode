@@ -4,6 +4,9 @@
   <artifactId>CodyCode-Lib</artifactId>
   <version>0.1.2</version>
   <name>Cody's Code - Library</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <licenses>
   	<license>
   		<name>MIT License</name>
