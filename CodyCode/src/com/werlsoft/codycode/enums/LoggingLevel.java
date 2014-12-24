@@ -55,7 +55,7 @@ public enum LoggingLevel {
 	 * @return Converted LoggingLevel
 	 * 
 	 * <p>Will return the converted LoggingLevel based on the given DisplayType</p>
-	 * <ul><h5>DisplayType conversions</h5>
+	 * <ul>DisplayType conversions
 	 * <li>FULL - will use the longest most explanatory name possible.</li>
 	 * <li>SHORT - will use only 4 digit short codes in the output. Good for a more constant appearance.</li>
 	 * <li>CONCISE - will use the shortest readable name possible. Normally the best choice.</li>

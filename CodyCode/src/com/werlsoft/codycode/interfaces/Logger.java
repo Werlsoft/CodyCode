@@ -21,8 +21,8 @@ public interface Logger {
 	 * @param level The level to display when logging message
 	 * 
 	 * <p>Used to send Strings to all outputs connected to the {@link BaseLogger} this method is run on.</p>
-	 * <p> For example <br/>
-	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'<br/>
+	 * <p> For example
+	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'
 	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link ConsoleLogger} attaches to System.out automatically)
 	 * 
 	 */
