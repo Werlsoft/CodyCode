@@ -39,7 +39,7 @@ public interface Logger {
 	 * @param format
 	 * 
 	 * <p>Used to format the output of the {@link com.werlsoft.codycode.adstracts.BaseLogger} to all outputs.</p>
-	 * <h5>These codes are replaced with the listed attribute</h5>
+	 * <h3>These codes are replaced with the listed attribute</h3>
 	 * <ul>
 	 * 	<li>'<code>%1$s</code>' - TimeStamp</li>
 	 * 	<li>'<code>%2$s</code>' - LoggingLevel</li>
@@ -74,7 +74,7 @@ public interface Logger {
 	 * @param displayType
 	 * 
 	 * <p>Set the display type. This is used for automatic formatting of levels to create a consistent appearance regardless of the specific LoggingLevel used.</p>
-	 * <ul><h5>Effects</h5>
+	 * <ul><h3>Effects</h3>
 	 * <li>FULL - will use the longest most explanatory name possible.</li>
 	 * <li>SHORT - will use only 4 digit short codes in the output. Good for a more constant appearance.</li>
 	 * <li>CONCISE - will use the shortest readable name possible. Normally the best choice.</li>
