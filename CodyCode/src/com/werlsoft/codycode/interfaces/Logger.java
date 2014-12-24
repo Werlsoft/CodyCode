@@ -8,7 +8,7 @@ public interface Logger {
 	 * 
 	 * @param message The information to display
 	 * 
-	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.adstracts.BaseLogger} this method is run on. This method uses the Default level set using the setDefaultLevel method.</p>
+	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.abstracts.BaseLogger} this method is run on. This method uses the Default level set using the setDefaultLevel method.</p>
 	 * <p> For example 
 	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'
 	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link com.werlsoft.codycode.loggers.ConsoleLogger} attaches to System.out automatically)
@@ -20,7 +20,7 @@ public interface Logger {
 	 * @param message The information to display
 	 * @param level The level to display when logging message
 	 * 
-	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.adstracts.BaseLogger} this method is run on.</p>
+	 * <p>Used to send Strings to all outputs connected to the {@link com.werlsoft.codycode.abstracts.BaseLogger} this method is run on.</p>
 	 * <p> For example
 	 * '<code>new ConsoleLogger().log("Hello World",LoggingLevel.INFO);</code>'
 	 * would print '<code>TimeStamp-INFO: Hello World</code>' to the console ({@link com.werlsoft.codycode.loggers.ConsoleLogger} attaches to System.out automatically)
@@ -38,7 +38,7 @@ public interface Logger {
 	 * 
 	 * @param format
 	 * 
-	 * <p>Used to format the output of the {@link com.werlsoft.codycode.adstracts.BaseLogger} to all outputs.</p>
+	 * <p>Used to format the output of the {@link com.werlsoft.codycode.abstracts.BaseLogger} to all outputs.</p>
 	 * <h3>These codes are replaced with the listed attribute</h3>
 	 * <ul>
 	 * 	<li>'<code>%1$s</code>' - TimeStamp</li>
@@ -74,7 +74,8 @@ public interface Logger {
 	 * @param displayType
 	 * 
 	 * <p>Set the display type. This is used for automatic formatting of levels to create a consistent appearance regardless of the specific LoggingLevel used.</p>
-	 * <ul><h3>Effects</h3>
+	 * <h3>Effects</h3>
+	 * <ul>
 	 * <li>FULL - will use the longest most explanatory name possible.</li>
 	 * <li>SHORT - will use only 4 digit short codes in the output. Good for a more constant appearance.</li>
 	 * <li>CONCISE - will use the shortest readable name possible. Normally the best choice.</li>
@@ -101,7 +102,7 @@ public interface Logger {
 	public boolean getRTL();
 	/**
 	 * 
-	 * @return
+	 * @return returns self as a logger object.
 	 */
 	public Logger getLogger();
 	
