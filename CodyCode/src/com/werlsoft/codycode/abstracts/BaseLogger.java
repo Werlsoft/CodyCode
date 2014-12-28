@@ -5,7 +5,9 @@ import com.werlsoft.codycode.enums.DisplayType;
 import com.werlsoft.codycode.enums.LoggingLevel;
 import com.werlsoft.codycode.interfaces.Logger;
 
-public abstract class BaseLogger implements Logger {
+	//INTENTIALLY BROKEN TO TEST BUILD SERVER STRIPTS FOR FAILED BUILDS!
+
+public abstract class //BaseLogger implements Logger {
 	
 	protected LoggingLevel defaultLevel = LoggingLevel.INFO; //default level is INFO
 	protected DisplayType displayType = DisplayType.CONCISE; //default display type is CONCISE
